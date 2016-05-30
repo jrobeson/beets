@@ -176,7 +176,7 @@ def extract(log, outpath, item):
         log.warning(u'Unknown image type in {0}.',
                     displayable_path(item.path))
         return
-    outpath += b'.' + ext
+    outpath += '.' + ext
 
     log.info(u'Extracting album art from: {0} to: {1}',
              item, displayable_path(outpath))

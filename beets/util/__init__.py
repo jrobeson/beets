@@ -482,7 +482,7 @@ def unique_path(path):
         return path
 
     base, ext = os.path.splitext(path)
-    match = re.search(br'\.(\d)+$', base)
+    match = re.search(r'\.(\d)+$', base)
     if match:
         num = int(match.group(1))
         base = base[:match.start()]
@@ -490,7 +490,7 @@ def unique_path(path):
         num = 0
     while True:
         num += 1
-        new_path = b'%s.%i%s' % (base, num, ext)
+        new_path = '%s.%i%s' % (base, num, ext)
         if not os.path.exists(new_path):
             return new_path
 

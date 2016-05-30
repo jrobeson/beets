@@ -163,7 +163,7 @@ class ThumbnailsPlugin(BeetsPlugin):
         """
         uri = self.get_uri(path)
         hash = md5(uri).hexdigest()
-        return b"{0}.png".format(hash)
+        return "{0}.png".format(hash)
 
     def add_tags(self, album, image_path):
         """Write required metadata to the thumbnail
@@ -178,7 +178,7 @@ class ThumbnailsPlugin(BeetsPlugin):
                                 util.displayable_path(image_path))
 
     def make_dolphin_cover_thumbnail(self, album):
-        outfilename = os.path.join(album.path, b".directory")
+        outfilename = os.path.join(album.path, ".directory")
         if os.path.exists(outfilename):
             return
         artfile = os.path.split(album.artpath)[1]

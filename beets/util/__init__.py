@@ -678,7 +678,7 @@ def cpu_count():
 def command_output(cmd, shell=False):
     """Runs the command and returns its output after it has exited.
 
-    ``cmd`` is a list of byte string arguments starting with the command names.
+    ``cmd`` is a list of string arguments starting with the command names.
     If ``shell`` is true, ``cmd`` is assumed to be a string and passed to a
     shell to execute.
 
